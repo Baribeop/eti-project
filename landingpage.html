@@ -21,40 +21,96 @@
         footer, a{
             padding: 20px;
             text-decoration: none;
-            text-align: left;
-          
+            text-align: left
         }
+
+        nav {
+            text-align: right; 
+            margin-right: 20px; 
+            padding: 5px;
+        }
+
+        main {
+            text-align: center; 
+            margin-top: 100px;
+        }
+
+        #logo{
+            padding-bottom: 30px;
+        }
+        #logo img {
+            height: 100px;
+        }
+
+        #demo {
+            display: none; 
+            position: absolute; 
+            left: 45px;
+        }
+        #demo , ul, li {
+            padding: 5px;
+        }
+
+        input{
+            width: 600px; 
+            height: 40px; 
+            border-radius: 30px; 
+            border-color: #f8f9fa; 
+            color: #f8f9fa; 
+        }
+
+        #onclick {
+            padding-top: 20px; 
+            position: relative;
+        }
+
+        #footer-container{
+            padding-top: 10px;
+        }
+
+        #footer-container, footer{
+            display: inline;  color: #555;
+
+        }
+         #footer-container, footer, li{
+            list-style: none; 
+            padding-right: 20px; 
+            font: 1em sans-serif; 
+            font-size: 14px
+         }
+         #offer{
+             padding: 20px; 
+             text-align: center;
+         }
              
     </style>
 </head>
 <body>
-    <nav style="text-align: right; margin-right: 20px; padding: 5px;">
+    <nav>
         <a href="#" style="text-decoration: none;">Gmail</a>
         <a href="#" style="text-decoration: none;">Images</a>
     </nav>
-    <main style="text-align: center; margin-top: 100px;"> 
+    <main> 
         <!-- <h1 style="font-size: 50px;">Google</h1> -->
-        <div id="logo" style="padding-bottom: 30px;">
-            <img style=" height: 100px;" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google Logo" />
+        <div id="logo">
+            <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google Logo" />
         </div>
 
         <form action="">
-            <input style="width: 600px; height: 40px; border-radius: 30px; border-color: #f8f9fa; color: #f8f9fa;" type="text"  onclick="expandSearch">
-            <div style="padding-top: 20px; position: relative;" onclick = "dropDown()">
+            <input type="text">
+            <div id="onclick"  onclick = "dropDown()">
                 <button style="border: none; background-color: whitesmoke; padding: 10px; border-radius: 6px;" type="submit">Google search</button>
                 <button  style="border: none; background-color: whitesmoke; padding: 10px; border-radius: 6px;" type="submit">I'm feeling lucky</button>
             </div>
          
-            <div id="demo" style="display: none; position: absolute; left: 45px;">
+            <div id="demo">
                <ul style="list-style: none; ">
-                <li style="padding: 5px;">Something</li>
-                <li style="padding: 5px;">Do a thing</li>
+                <li>Something</li>
+                <li>Do a thing</li>
                </ul> 
             </div>
-           
-            
         </form>
-        <div style="padding: 20px; text-align: center;" >
+        <div id="offer">
             <p style="display: inline;">Google offered in:
                 <a href="www.google.com">Hausa</a>
                 <a href="www.google.com">Igbo</a>
@@ -62,9 +118,9 @@
                 <a href="www.google.com">Nigerian Pigin</a>
             </p>
         </div>
-        <div style="padding-top: 90px;">
-            <footer style="display: inline;  color: #555;">
-                <ul style="list-style: none; padding-right: 20px; font: 1em sans-serif; font-size: 14px;">
+        <div id="footer-container">
+            <footer>
+                <ul>
                     <a href="#">About</a>
                     <a href="#">Advertising</a>
                     <a href="#">Business</a>
@@ -82,7 +138,6 @@
 
     <script>
         function dropDown(){
-
          document.getElementById("demo").style.display = "block"
         }
 
